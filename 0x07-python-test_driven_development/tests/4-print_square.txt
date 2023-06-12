@@ -1,0 +1,35 @@
+This module defines a square-printing function ``print_square(size)``.
+
+
+Squares are printed using the ``#`` character. The parameter ``size``
+
+Testing import
+    >>> print_square = __import__('4-print_square').print_square
+
+
+Testing Normal Display
+    >>> print_square(3)
+    ###
+    ###
+    ###
+
+Testing size is not int
+    >>> print_square('Ahmed')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Testing size is int but less than 0
+    >>> print_square(-3)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Testing size is int is 0
+    >>> print_square(0)
+
+Testing size is float and less than 0
+    >>> print_square(-5.25)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
